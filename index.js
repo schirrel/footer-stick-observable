@@ -32,3 +32,5 @@ export function observe({ callback, name }) {
     sentinel,
   })
 }
+
+window.observeStickyBottom = observe
