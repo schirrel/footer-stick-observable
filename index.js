@@ -7,7 +7,6 @@ function intersection({ callback, name, sentinel }) {
     ) {
       callback(changes[0].isIntersecting)
       intersecting[name] = changes[0].isIntersecting
-      console.log(changes[0].boundingClientRect)
     }
   }, {})
 
