@@ -1,6 +1,5 @@
 # footer-stick-observable
-
-A helper to listen to `position:sticky` when used for bottom, when it is stuck or not
+A helper for bottom `position:sticky`,  to listen when it is stuck or not.
 
 ## Install
 
