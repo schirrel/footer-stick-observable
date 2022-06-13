@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+      section {
+        background: cornflowerblue;
+        display: block;
+        height: 1000px;
+      }
+
+      article {
+        background: lightseagreen;
+        display: block;
+        height: 200px;
+      }
+      footer {
+        background: crimson;
+        bottom: 0;
+        height: 100px;
+        display: flex;
+        position: sticky;
+        transition: all 300ms;
+      }
+
+      footer.stuck {
+        background: orange;
+        text-align: center;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section></section>
+
+    <article></article>
+    <footer class="my-footer"></footer>
+    <section></section>
+
+    <article></article>
+  </body>
+  <script type="module">
+    import { observe } from "./index.js";
+
+    const myFooter = document.querySelector(".my-footer");
+    observe({
+      selector: ".my-footer",
+      callback: ({ isStuck }) => {
+        if (isStuck) {
+          myFooter.classList.add("stuck");
+          myFooter.innerHTML = "I am stuck";
+        } else {
+          myFooter.classList.remove("stuck");
+          myFooter.innerHTML = "No more stuck";
+        }
+      },
+    });
+  </script>
+</html>
