@@ -1,0 +1,24 @@
+{
+  "name": "@schirrel/footer-stick-observable",
+  "version": "1.0.0",
+  "description": "A helper to listen when a position:sticky at bottom is stuck",
+  "main": "index.js",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schirrel/footer-stick-observable.git"
+  },
+  "keywords": [
+    "fetch",
+    "api"
+  ],
+  "author": "@schirrel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schirrel/footer-stick-observable/issues"
+  },
+  "homepage": "https://github.com/schirrel/footer-stick-observable#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  }
+}
